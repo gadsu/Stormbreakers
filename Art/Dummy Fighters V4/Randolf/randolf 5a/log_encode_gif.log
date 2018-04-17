@@ -1,0 +1,138 @@
+ffmpeg version 3.4.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 7.2.0 (GCC)
+  configuration: --enable-gpl --enable-version3 --enable-sdl2 --enable-bzlib --enable-fontconfig --enable-gnutls --enable-iconv --enable-libass --enable-libbluray --enable-libfreetype --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libtheora --enable-libtwolame --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libzimg --enable-lzma --enable-zlib --enable-gmp --enable-libvidstab --enable-libvorbis --enable-cuda --enable-cuvid --enable-d3d11va --enable-nvenc --enable-dxva2 --enable-avisynth --enable-libmfx
+  libavutil      55. 78.100 / 55. 78.100
+  libavcodec     57.107.100 / 57.107.100
+  libavformat    57. 83.100 / 57. 83.100
+  libavdevice    57. 10.100 / 57. 10.100
+  libavfilter     6.107.100 /  6.107.100
+  libswscale      4.  8.100 /  4.  8.100
+  libswresample   2.  9.100 /  2.  9.100
+  libpostproc    54.  7.100 / 54.  7.100
+Splitting the commandline.
+Reading option '-v' ... matched as option 'v' (set logging level) with argument 'debug'.
+Reading option '-nostdin' ... matched as option 'stdin' (enable or disable interaction on standard input) with argument 0.
+Reading option '-progress' ... matched as option 'progress' (write program-readable progress information) with argument 'C:/Users/dudewithgames/AppData/Local/Temp/KritaFFmpegProgress.u10548'.
+Reading option '-r' ... matched as option 'r' (set frame rate (Hz value, fraction or abbreviation)) with argument '25'.
+Reading option '-start_number' ... matched as AVOption 'start_number' with argument '0'.
+Reading option '-i' ... matched as input url with argument 'D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/randolf5a%04d.png'.
+Reading option '-i' ... matched as input url with argument 'D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/palette.png'.
+Reading option '-lavfi' ... matched as option 'lavfi' (create a complex filtergraph) with argument '[0:v][1:v] paletteuse'.
+Reading option '-y' ... matched as option 'y' (overwrite output files) with argument '1'.
+Reading option 'D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/randolf rig.gif' ... matched as output url.
+Finished splitting the commandline.
+Parsing a group of options: global .
+Applying option v (set logging level) with argument debug.
+Applying option nostdin (enable or disable interaction on standard input) with argument 0.
+Applying option progress (write program-readable progress information) with argument C:/Users/dudewithgames/AppData/Local/Temp/KritaFFmpegProgress.u10548.
+[file @ 000001f34e202e40] Setting default whitelist 'file,crypto'
+Applying option lavfi (create a complex filtergraph) with argument [0:v][1:v] paletteuse.
+Applying option y (overwrite output files) with argument 1.
+Successfully parsed a group of options.
+Parsing a group of options: input url D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/randolf5a%04d.png.
+Applying option r (set frame rate (Hz value, fraction or abbreviation)) with argument 25.
+Successfully parsed a group of options.
+Opening an input file: D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/randolf5a%04d.png.
+[image2 @ 000001f34ca47580] Opening 'D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/randolf5a0000.png' for reading
+[file @ 000001f34ca4a780] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001f34e24bfe0] Statistics: 145804 bytes read, 0 seeks
+[image2 @ 000001f34ca47580] Opening 'D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/randolf5a0001.png' for reading
+[file @ 000001f34e26fc40] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001f34e26fd20] Statistics: 145804 bytes read, 0 seeks
+[image2 @ 000001f34ca47580] Opening 'D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/randolf5a0002.png' for reading
+[file @ 000001f34e26fce0] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001f34ca4e660] Statistics: 185906 bytes read, 0 seeks
+[image2 @ 000001f34ca47580] Opening 'D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/randolf5a0003.png' for reading
+[file @ 000001f34ca4e660] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001f34ca4e740] Statistics: 185906 bytes read, 0 seeks
+[image2 @ 000001f34ca47580] Opening 'D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/randolf5a0004.png' for reading
+[file @ 000001f34ca4e700] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001f34ca4e8e0] Statistics: 145804 bytes read, 0 seeks
+[image2 @ 000001f34ca47580] Opening 'D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/randolf5a0005.png' for reading
+[file @ 000001f34ca4e8e0] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001f34ca4e9c0] Statistics: 145804 bytes read, 0 seeks
+Input #0, image2, from 'D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/randolf5a%04d.png':
+  Duration: 00:00:00.24, start: 0.000000, bitrate: N/A
+    Stream #0:0, 6, 1/25: Video: png, 1 reference frame, rgba(pc), 1000x1000 [SAR 11811:11811 DAR 1:1], 0/1, 25 fps, 25 tbr, 25 tbn, 25 tbc
+Successfully opened the file.
+Parsing a group of options: input url D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/palette.png.
+Successfully parsed a group of options.
+Opening an input file: D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/palette.png.
+[NULL @ 000001f34e745580] Opening 'D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/palette.png' for reading
+[file @ 000001f34ca4e980] Setting default whitelist 'file,crypto'
+[png_pipe @ 000001f34e745580] Format png_pipe probed with size=2048 and score=99
+[png_pipe @ 000001f34e745580] Before avformat_find_stream_info() pos: 0 bytes read:846 seeks:0 nb_streams:1
+[png_pipe @ 000001f34e745580] After avformat_find_stream_info() pos: 846 bytes read:846 seeks:0 frames:1
+Input #1, png_pipe, from 'D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/palette.png':
+  Duration: N/A, bitrate: N/A
+    Stream #1:0, 1, 1/25: Video: png, 1 reference frame, rgba(pc), 16x16 [SAR 1:1 DAR 1:1], 0/1, 25 tbr, 25 tbn, 25 tbc
+Successfully opened the file.
+detected 8 logical cores
+Parsing a group of options: output url D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/randolf rig.gif.
+Successfully parsed a group of options.
+Opening an output file: D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/randolf rig.gif.
+[file @ 000001f34ca49460] Setting default whitelist 'file,crypto'
+Successfully opened the file.
+Stream mapping:
+  Stream #0:0 (png) -> paletteuse:default
+  Stream #1:0 (png) -> paletteuse:palette
+  paletteuse -> Stream #0:0 (gif)
+cur_dts is invalid (this is harmless if it occurs once at the start per stream)
+    Last message repeated 8 times
+[graph 0 input from stream 0:0 @ 000001f34e7a22c0] Setting 'video_size' to value '1000x1000'
+[graph 0 input from stream 0:0 @ 000001f34e7a22c0] Setting 'pix_fmt' to value '28'
+[graph 0 input from stream 0:0 @ 000001f34e7a22c0] Setting 'time_base' to value '1/25'
+[graph 0 input from stream 0:0 @ 000001f34e7a22c0] Setting 'pixel_aspect' to value '11811/11811'
+[graph 0 input from stream 0:0 @ 000001f34e7a22c0] Setting 'sws_param' to value 'flags=2'
+[graph 0 input from stream 0:0 @ 000001f34e7a22c0] Setting 'frame_rate' to value '25/1'
+[graph 0 input from stream 0:0 @ 000001f34e7a22c0] w:1000 h:1000 pixfmt:rgba tb:1/25 fr:25/1 sar:11811/11811 sws_param:flags=2
+[graph 0 input from stream 1:0 @ 000001f34e7a25e0] Setting 'video_size' to value '16x16'
+[graph 0 input from stream 1:0 @ 000001f34e7a25e0] Setting 'pix_fmt' to value '28'
+[graph 0 input from stream 1:0 @ 000001f34e7a25e0] Setting 'time_base' to value '1/25'
+[graph 0 input from stream 1:0 @ 000001f34e7a25e0] Setting 'pixel_aspect' to value '1/1'
+[graph 0 input from stream 1:0 @ 000001f34e7a25e0] Setting 'sws_param' to value 'flags=2'
+[graph 0 input from stream 1:0 @ 000001f34e7a25e0] Setting 'frame_rate' to value '25/1'
+[graph 0 input from stream 1:0 @ 000001f34e7a25e0] w:16 h:16 pixfmt:rgba tb:1/25 fr:25/1 sar:1/1 sws_param:flags=2
+[format @ 000001f34e7a2980] compat: called with args=[rgb8|bgr8|rgb4_byte|bgr4_byte|gray|pal8]
+[format @ 000001f34e7a2980] Setting 'pix_fmts' to value 'rgb8|bgr8|rgb4_byte|bgr4_byte|gray|pal8'
+[auto_scaler_0 @ 000001f34e7a3a60] w:iw h:ih flags:'bilinear' interl:0
+[Parsed_paletteuse_0 @ 000001f34e7c8120] auto-inserting filter 'auto_scaler_0' between the filter 'graph 0 input from stream 0:0' and the filter 'Parsed_paletteuse_0'
+[auto_scaler_1 @ 000001f34e2de820] w:iw h:ih flags:'bilinear' interl:0
+[Parsed_paletteuse_0 @ 000001f34e7c8120] auto-inserting filter 'auto_scaler_1' between the filter 'graph 0 input from stream 1:0' and the filter 'Parsed_paletteuse_0'
+[AVFilterGraph @ 000001f34e7c7fe0] query_formats: 5 queried, 2 merged, 2 already done, 0 delayed
+[swscaler @ 000001f34e85c600] Forcing full internal H chroma due to input having non subsampled chroma
+[auto_scaler_0 @ 000001f34e7a3a60] w:1000 h:1000 fmt:rgba sar:11811/11811 -> w:1000 h:1000 fmt:bgra sar:1/1 flags:0x2
+[swscaler @ 000001f34e869960] Forcing full internal H chroma due to input having non subsampled chroma
+[auto_scaler_1 @ 000001f34e2de820] w:16 h:16 fmt:rgba sar:1/1 -> w:16 h:16 fmt:bgra sar:1/1 flags:0x2
+[Parsed_paletteuse_0 @ 000001f34e7c8120] [framesync @ 000001f34e7d9008] Selected 1/25 time base
+[Parsed_paletteuse_0 @ 000001f34e7c8120] [framesync @ 000001f34e7d9008] Sync level 2
+Output #0, gif, to 'D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/randolf rig.gif':
+  Metadata:
+    encoder         : Lavf57.83.100
+    Stream #0:0, 0, 1/100: Video: gif, 1 reference frame, pal8, 1000x1000 [SAR 1:1 DAR 1:1], 0/1, q=2-31, 200 kb/s, 25 fps, 100 tbn, 25 tbc (default)
+    Metadata:
+      encoder         : Lavc57.107.100 gif
+Clipping frame in rate conversion by 0.000008
+[gif @ 000001f34e2ca060] 1x1 image at pos (999;999) [area:1000x1000]
+[gif @ 000001f34e2ca060] 654x964 image at pos (243;27) [area:1000x1000]
+[gif @ 000001f34e2ca060] 1x1 image at pos (999;999) [area:1000x1000]
+[gif @ 000001f34e2ca060] 654x964 image at pos (243;27) [area:1000x1000]
+[gif @ 000001f34e2ca060] 1x1 image at pos (999;999) [area:1000x1000]
+[Parsed_paletteuse_0 @ 000001f34e7c8120] [framesync @ 000001f34e7d9008] Sync level 0
+[out_0_0 @ 000001f34e7c82a0] EOF on sink link out_0_0:default.
+No more output streams to write to, finishing.
+frame=    6 fps=0.0 q=-0.0 Lsize=     183kB time=00:00:00.21 bitrate=7154.3kbits/s speed=0.474x    
+[AVIOContext @ 000001f34ca47440] Statistics: 0 seeks, 1 writeouts
+video:183kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.454130%
+Input file #0 (D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/randolf5a%04d.png):
+  Input stream #0:0 (video): 6 packets read (955028 bytes); 6 frames decoded; 
+  Total: 6 packets (955028 bytes) demuxed
+Input file #1 (D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/palette.png):
+  Input stream #1:0 (video): 1 packets read (846 bytes); 1 frames decoded; 
+  Total: 1 packets (846 bytes) demuxed
+Output file #0 (D:/Stormbreakers/Art/Dummy Fighters V4/Randolf/randolf 5a/randolf rig.gif):
+  Output stream #0:0 (video): 6 frames encoded; 6 packets muxed (186951 bytes); 
+  Total: 6 packets (186951 bytes) muxed
+7 frames successfully decoded, 0 decoding errors
+[AVIOContext @ 000001f34ca4c8c0] Statistics: 0 seeks, 2 writeouts
+[AVIOContext @ 000001f34e24bf40] Statistics: 846 bytes read, 0 seeks

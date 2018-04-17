@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="Randolf Pain (1st Draft)_data" version="1.3.0" audacityversion="2.1.2" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="0.0000000000" zoom="1096.7922965417" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags/>
+	<wavetrack name="90164__snaginneb__gruntsound" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="9449">
+				<waveblock start="0">
+					<simpleblockfile filename="e000090b.au" len="9449" min="-0.410108" max="0.366116" rms="0.032883"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="1">
+				<controlpoint t="0.214240362812" val="1.000000000000"/>
+			</envelope>
+		</waveclip>
+		<waveclip offset="0.21426304">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="175">
+				<waveblock start="0">
+					<simpleblockfile filename="e00003e2.au" len="175" min="0.0" max="0.0" rms="0.0"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="1">
+				<controlpoint t="0.000000000000" val="1.000000000000"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="90164__snaginneb__gruntsound" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="9449">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000925.au" len="9449" min="-0.410108" max="0.366116" rms="0.032883"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="1">
+				<controlpoint t="0.214240362812" val="1.000000000000"/>
+			</envelope>
+		</waveclip>
+		<waveclip offset="0.21426304">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="175">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000570.au" len="175" min="0.0" max="0.0" rms="0.0"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="1">
+				<controlpoint t="0.000000000000" val="1.000000000000"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+</project>

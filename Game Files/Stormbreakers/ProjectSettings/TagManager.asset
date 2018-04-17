@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Hitbox
+  - Hurtbox
+  - Pushbox
+  - Randolf
+  - Lynne
+  - Projectile
+  - Fireball
+  - Wall
+  - Floor
+  - ThrowHitbox
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - Hitbox
+  - Player1
+  - Player2
+  - Pushbox
+  - WallsOnly
+  - Invincible
+  - ThrowHitbox
+  - AirCollisionFix
+  - AirCollisionDownardFix
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Stage
+    uniqueID: 695294363
+    locked: 0
+  - name: Characters
+    uniqueID: 2712493009
+    locked: 0
+  - name: UI
+    uniqueID: 958970177
+    locked: 0

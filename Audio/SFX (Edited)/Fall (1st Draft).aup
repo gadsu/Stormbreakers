@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="Fall_data" version="1.3.0" audacityversion="2.1.2" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="0.0000000000" zoom="1504.2773154591" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags/>
+	<wavetrack name="364690__alegemaate__human-impact-on-ground" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="0.223872" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="7389">
+				<waveblock start="0">
+					<simpleblockfile filename="e000013f.au" len="6655" min="-0.999939" max="0.952728" rms="0.099635"/>
+				</waveblock>
+				<waveblock start="6655">
+					<simpleblockfile filename="e0000824.au" len="734" min="-0.001648" max="0.003601" rms="0.000179"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="364690__alegemaate__human-impact-on-ground" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="0.223872" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="7389">
+				<waveblock start="0">
+					<simpleblockfile filename="e000008f.au" len="6655" min="-0.912811" max="0.919861" rms="0.089362"/>
+				</waveblock>
+				<waveblock start="6655">
+					<simpleblockfile filename="e0000a2b.au" len="734" min="-0.001709" max="0.003754" rms="0.000155"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>

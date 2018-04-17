@@ -1,0 +1,23 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MiscScripts\TutorialTaskManager.cs">
+    <Files>
+      <File FileName="Assets\Scripts\CharacterScripts\InputGatherer.cs" Line="92" Column="6" />
+      <File FileName="Assets\Scripts\CharacterScripts\CharacterAttacks.cs" Line="435" Column="117" />
+      <File FileName="Assets\Resources\LynneData.txt" Line="2" Column="10" />
+      <File FileName="Assets\Resources\RandolfData.txt" Line="2" Column="10" />
+      <File FileName="Assets\Scripts\CharacterScripts\LynneSpecific\LynneSpecials.cs" Line="106" Column="9" />
+      <File FileName="Assets\Scripts\CharacterScripts\CommandInterpreter.cs" Line="1068" Column="59" />
+      <File FileName="Assets\Scripts\CharacterScripts\CharacterState.cs" Line="315" Column="24" />
+      <File FileName="Assets\Scripts\CharacterScripts\CharacterMovement.cs" Line="589" Column="65" />
+      <File FileName="Assets\Scripts\MiscScripts\TextDisplayScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MiscScripts\TutorialTaskManager.cs" Line="376" Column="73" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="E:\Users\Raechel\WORKING\Stormbreakers SVN\Game Files\Stormbreakers\Assets\Scripts\CharacterScripts\CommandInterpreter.cs" line="1136" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

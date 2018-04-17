@@ -1,0 +1,42 @@
+Light
+Medium
+Heavy 
+X3
+
+Idle
+Crouch
+Throw
+Jump(Neutral, forward, backward)
+Walk
+Back walk
+Run
+Backdash
+Hit while Standing, Crouching, Midair
+Falling
+Blocking high and low
+Wake up
+Ground tech
+Air tech
+
+
+Character Super
+Channeling element(Using buffing specials, charging meter,)
+
+
+Randolf
+Fireball
+Rush attack
+DP
+Command Grab
+
+Lynne
+Fireball
+Slide(Reuse light follow up from another move)
+Slide > Low follow up
+Slide > Overhead follow up
+DP 
+
+
+Optional
+Intro pose
+Win pose

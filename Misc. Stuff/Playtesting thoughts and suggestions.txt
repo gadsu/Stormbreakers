@@ -1,0 +1,40 @@
+Pushback on attacking player as well to prevent permanently being in the corner.
+
+Increase range on Lynn's basic attacks, currently you need to be right on top of your enemy to land them
+Add a slight delay before you're able to jump after a special moves?
+
+Allow both players to separately select rematch or main menu
+
+Randolf can immediately cancel normal attacks into jumps and movement, while Lynn must wait the full duration of her attacks to be able to move again
+Randolf still can move while charging Super
+Randolf's attacks seem to end much quicker than Lynn's
+
+
+Bug: Vine Transit jump glitch can be used to escape the stage
+Bug: Death Laser won't knock back when your enemy is a certain distance away
+Bug: Hitting someone with Death Laser twice while they are against the left wall prevents them from acting at all*
+Bug: When characters are attacked(getting hit or blocking) with their backs to the wall, they are unable to be hit until they start moving again
+	It actually seems to happen outside of the corner too, but is only noticeable while blocking as pushback is too large for hits.
+
+Michael-[
+Balance:
+Reiterating need for adding pushback on attacking player
+In turn, reduce enemy pushback on regular attacks so that all three standing attacks can connect on the opponent
+Increase Lynne's range.
+	5A is very short
+	5B has Lynne lean backwards as she kicks, reducing her range.
+	2A and 2B literally shrink Lynne, making her range shorter
+	2B also makes Lynne lean backwards, reducing her range.
+	2C should not make Lynne stand.
+	
+Animations/Art:
+Issues with Lynne listed above
+Randolf
+	All of Randolf's punching attacks come from the same arm, need some more variety
+		Ask for suggestions from others if you need help
+	2B should have Randolf rise with his body and not his arm
+	2C looks good, but the leg he kicks with is shorter than his other leg
+	Make sure that the anatomy of Randolf is correct and symmetrical
+	Randolf still has the bad ear and it's driving me insane
+	
+]
