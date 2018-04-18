@@ -1,4 +1,4 @@
-dmgL236E = 3
+dmgL236E = 4
 dmgL214E = 5
 dmgLSuper = 7
 dmgD236E = 1
