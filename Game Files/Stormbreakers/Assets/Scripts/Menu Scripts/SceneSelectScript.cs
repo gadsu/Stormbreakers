@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class SceneSelectScript : MonoBehaviour {
     
@@ -12,9 +13,13 @@ public class SceneSelectScript : MonoBehaviour {
     private bool p1ElemSet = false;
     private bool p2ElemSet = false;
 
+    Image img;
+
     private AudioSource audioSource;
 	// Use this for initialization
 	void Start () {
+        img = GameObject.Find("Selected Stage").GetComponent<Image>();
+
             if (GameObject.Find("CharacterChoices"))
             {
                 //Set Characters
@@ -206,5 +211,13 @@ public class SceneSelectScript : MonoBehaviour {
 			back.Select ();
 			back.onClick.Invoke ();
 		}
+        if(GameObject.Find("EventSystem").GetComponent<EventSystem>().currentSelectedGameObject.name.Contains("Fountain"))
+        {
+            img.sprite = GameObject.Find("Fountain Button").GetComponent<Image>().sprite;
+        }
+        else if(GameObject.Find("EventSystem").GetComponent<EventSystem>().currentSelectedGameObject.name.Contains("Dojo"))
+        {
+            img.sprite = GameObject.Find("Dojo Button").GetComponent<Image>().sprite;
+        }
 	}
 }
