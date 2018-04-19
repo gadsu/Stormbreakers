@@ -80,6 +80,7 @@ public class CharacterState : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //See which side the player starts on for purpose of flipping sprites
+        Debug.Log("p1");
         if (gameObject.name.Contains("player1"))
         {
             healthBar = GameObject.Find("Player1Slider").GetComponent<Slider>();
@@ -115,6 +116,8 @@ public class CharacterState : MonoBehaviour {
         cm = GetComponent<CharacterMovement>();
         rb = GetComponent<Rigidbody2D>();
         ci = GetComponent<CommandInterpreter>();
+
+        Debug.Log("CM:");
 
         hitAnim = "hit";
         blockAnim = "block";

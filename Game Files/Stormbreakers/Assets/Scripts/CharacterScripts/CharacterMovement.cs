@@ -251,6 +251,7 @@ public class CharacterMovement : MonoBehaviour {
                 {
                     if (cs.isOnLeft())
                     {
+                        anim.Play("backDash");
                         rb.velocity = new Vector2(-1 * (dashSpeed), 0);
                         dashDirection = '5';
                     }
@@ -269,7 +270,8 @@ public class CharacterMovement : MonoBehaviour {
                     }
                     else
                     {
-                        rb.velocity = new Vector2(dashSpeed/2, 0);
+                        anim.Play("backDash");
+                        rb.velocity = new Vector2(dashSpeed, 0);
                         dashDirection = '5';
                     }
                 }
@@ -646,6 +648,11 @@ public class CharacterMovement : MonoBehaviour {
         {
             return true;
         }
+        else if (anim.GetCurrentAnimatorStateInfo(0).IsName("backDash"))
+        {
+            return true;
+        }
+
         else if (ci.charging) //|| anim.GetCurrentAnimatorStateInfo(0).IsName("charge"))
         {
             return true;

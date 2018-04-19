@@ -35,10 +35,12 @@ public class TextDisplayScript : MonoBehaviour {
     bool readyToContinue;
     public bool taskComplete;
     TextAsset TutorialText;
+    IEnumerator coroutine;
 
 	// Use this for initialization
     void Start () 
     {
+        coroutine = TypeText();
         txtbox1 = GameObject.Find("P1Txtbox");
         txtbox2 = GameObject.Find("P2Txtbox");
         txtboxN = GameObject.Find("NarrTxtbox");
@@ -56,7 +58,7 @@ public class TextDisplayScript : MonoBehaviour {
         txtboxN.SetActive(false);
         option = 0;
         section = 0;
-        timeBetweenTasks = 60; //2 seconds
+        timeBetweenTasks = 60; //1 second
         crComplete = false;
         lineFinish = true;
         readyToContinue = false;
@@ -142,8 +144,16 @@ public class TextDisplayScript : MonoBehaviour {
 
 	void Update () 
     {
-
+        Debug.Log("readyToContinue: " + readyToContinue.ToString() + " - taskComplete: " + taskComplete.ToString() + " - lineFinish: " + lineFinish.ToString() + " - crComplete: " + crComplete);
      //   Debug.Log("Section: " + section + "\nOption: " + option);
+        if((Input.GetButtonDown("P1E") || Input.GetButtonDown("P2E")) && !lineFinish)
+        { 
+            txtC.text = msg;
+            StopCoroutine(coroutine);
+            lineFinish = true;
+            option++;
+            crComplete = false;
+        }
 
         if (!readyToContinue && taskComplete && section != 0 && option == -1)
         {
@@ -182,9 +192,10 @@ public class TextDisplayScript : MonoBehaviour {
         }
         else if (crComplete == false && lineFinish)
         {
+            Debug.Log("End else");
             lineFinish = false;
             setMsg();
-            StartCoroutine(TypeText());
+            StartCoroutine(coroutine);
         }
 	}
 }

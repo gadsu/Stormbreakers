@@ -261,7 +261,7 @@ public class TutorialTaskManager : MonoBehaviour {
                     }
                     break;
                 case 5: //Backdash
-                    if (/*anim.GetCurrentAnimatorStateInfo(0).IsName("bDash")*/ true) //Temporary. Fix after we get a backdash animation.
+                    if (anim.GetCurrentAnimatorStateInfo(0).IsName("backDash"))
                     {
                         counter++;
                         tds.taskComplete = true;
@@ -275,14 +275,14 @@ public class TutorialTaskManager : MonoBehaviour {
                     }
                     break;
                 case 7: //Mid block
-                    if (anim.GetCurrentAnimatorStateInfo(0).IsName("block")/* true*/) //Temporary, until we get Randolf's "AI" working in the tutorial.
+                    if (anim.GetCurrentAnimatorStateInfo(0).IsName("block") || anim.GetCurrentAnimatorStateInfo(0).IsName("crouchBlock")) //Temporary, until we get Randolf's "AI" working in the tutorial.
                     {
                         counter++;
                         tds.taskComplete = true;
                     }
                     break;
                 case 8: //Low Block
-                    if (/*anim.GetCurrentAnimatorStateInfo(0).IsName("block")*/ true) //This'll work for now, until we get a crouch block animation
+                    if (anim.GetCurrentAnimatorStateInfo(0).IsName("crouchBlock"))
                     {
                         counter++;
                         tds.taskComplete = true;

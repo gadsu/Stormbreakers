@@ -722,7 +722,7 @@ public class CommandInterpreter : MonoBehaviour
 
     public bool hasUpInput()
     {
-        return (inputQueue.getInputQueue().Contains('7') || inputQueue.getInputQueue().Contains('8') || inputQueue.getInputQueue().Contains('9'));
+        return (inputQueue != null && (inputQueue.getInputQueue().Contains('7') || inputQueue.getInputQueue().Contains('8') || inputQueue.getInputQueue().Contains('9')));
     }
 
     public bool hasDash()
