@@ -696,11 +696,6 @@ public class CharacterMovement : MonoBehaviour {
         {
             gameObject.layer = airCollisionDownardFixLayer;
         }
-        if (comboHits > 0)
-        {
-
-            Debug.Log(gameObject.name + comboHits.ToString());
-        }
 
         if (comboHits > 1 && !comboVisible)
         {

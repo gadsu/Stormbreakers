@@ -71,6 +71,8 @@ public class TutorialTaskManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        GetComponent<CharacterState>().fillHealth();
+
         if (!tds.taskComplete)
         {
             switch (counter)

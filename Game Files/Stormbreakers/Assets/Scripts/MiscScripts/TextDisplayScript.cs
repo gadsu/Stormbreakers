@@ -35,12 +35,11 @@ public class TextDisplayScript : MonoBehaviour {
     bool readyToContinue;
     public bool taskComplete;
     TextAsset TutorialText;
-    IEnumerator coroutine;
+    Coroutine coroutine;
 
 	// Use this for initialization
     void Start () 
     {
-        coroutine = TypeText();
         txtbox1 = GameObject.Find("P1Txtbox");
         txtbox2 = GameObject.Find("P2Txtbox");
         txtboxN = GameObject.Find("NarrTxtbox");
@@ -144,27 +143,22 @@ public class TextDisplayScript : MonoBehaviour {
 
 	void Update () 
     {
-        Debug.Log("readyToContinue: " + readyToContinue.ToString() + " - taskComplete: " + taskComplete.ToString() + " - lineFinish: " + lineFinish.ToString() + " - crComplete: " + crComplete);
+       //
      //   Debug.Log("Section: " + section + "\nOption: " + option);
-        if((Input.GetButtonDown("P1E") || Input.GetButtonDown("P2E")) && !lineFinish)
-        { 
-            txtC.text = msg;
-            StopCoroutine(coroutine);
-            lineFinish = true;
-            option++;
-            crComplete = false;
-        }
+
 
         if (!readyToContinue && taskComplete && section != 0 && option == -1)
         {
             readyToContinue = true;
             timeToContinue = Time.frameCount + timeBetweenTasks;
+           
         }
         else if (taskComplete && timeToContinue < Time.frameCount && section != 0 && option == -1)
         {
             startDialogue();
             option++;
             crComplete = false;
+           
         }
         else if ((Input.GetButtonDown("P1E") || Input.GetButtonDown("P2E")) && lineFinish && taskComplete && timeToContinue < Time.frameCount)
         {
@@ -174,6 +168,20 @@ public class TextDisplayScript : MonoBehaviour {
             }*/
             option++;
             crComplete = false;
+           
+        }
+        else if ((Input.GetButtonDown("P1E") || Input.GetButtonDown("P2E")) && crComplete && taskComplete)
+        { 
+            //Debug.Log("Skip Coroutine");
+            StopCoroutine(coroutine);
+            txtC.text = " " + msg;
+            option++;
+            crComplete = false;
+           
+        }
+        else if ((Input.GetButtonDown("P1E") || Input.GetButtonDown("P2E")) && taskComplete)
+        {
+            lineFinish = true;
         }
 
         if (msg == "END")
@@ -185,17 +193,20 @@ public class TextDisplayScript : MonoBehaviour {
             txtboxN.SetActive(false);
             msg = " ";
             option = -1;
+           
         }
         else if (msg == "FINISH")
         {
             SceneManager.LoadScene("MainMenu");
+           
         }
         else if (crComplete == false && lineFinish)
         {
-            Debug.Log("End else");
             lineFinish = false;
             setMsg();
-            StartCoroutine(coroutine);
+            coroutine = StartCoroutine("TypeText");
+           
         }
+
 	}
 }

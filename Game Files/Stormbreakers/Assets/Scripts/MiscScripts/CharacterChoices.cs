@@ -22,7 +22,8 @@ public class CharacterChoices : MonoBehaviour {
     private char p2Element;
 
     private string stage;
-
+    public int p1Score;
+    public int p2Score;
 	// Use this for initialization
 	void Start () 
     {
@@ -31,7 +32,43 @@ public class CharacterChoices : MonoBehaviour {
 
         p1Element = ' ';
         p2Element = ' ';
+
+        resetScore();
 	}
+
+    public void winScore(int player)
+    {
+        if (player == 1)
+        {
+            p1Score++;
+        }
+        else if (player == 2)
+        {
+            p2Score++;
+        }
+    }
+
+    public void resetScore()
+    {
+        p1Score = 0;
+        p2Score = 0;
+
+
+    }
+
+    public int getScore(int player)
+    {
+        if (player == 1)
+        {
+            return p1Score;
+        }
+        else if (player == 2)
+        {
+            return p2Score;
+        }
+
+        return 0;
+    }
 
     public void setP1Character(char p1)
     {

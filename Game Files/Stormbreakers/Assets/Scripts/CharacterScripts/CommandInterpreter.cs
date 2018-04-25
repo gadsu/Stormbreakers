@@ -1033,7 +1033,6 @@ public class CommandInterpreter : MonoBehaviour
                 else if (cm.canMove && !ca.isAttacking())
                 {
                     //ca.fiveE();
-                    Debug.Log("Charge!");
                     charging = true;
                 }
                 StartCoroutine("clearInputQueue");
