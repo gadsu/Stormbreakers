@@ -831,14 +831,8 @@ public class CommandInterpreter : MonoBehaviour
                         superFlash = Instantiate(superFlashPrefab, transform.position, transform.rotation, gameObject.transform);
                     }
 
-                    if (gameObject.name.Contains("L"))
-                    {
-                        anim.Play("LSuper");
-                    }
-                    else
-                    {
-                        ea.LSuper();
-                    }
+
+                    anim.Play("LSuper");
 
                 }
                 else if (elementChoice == 'd')
@@ -848,14 +842,9 @@ public class CommandInterpreter : MonoBehaviour
                         superFlash = Instantiate(superFlashPrefab, transform.position, transform.rotation, gameObject.transform);
                     }
 
-                    if (gameObject.name.Contains("L"))
-                    {
-                        anim.Play("DSuper");
-                    }
-                    else
-                    {
-                        ea.DSuper();
-                    }
+            
+                    anim.Play("DSuper");
+              
                 }
                 else if (elementChoice == 's')
                 {
@@ -864,14 +853,8 @@ public class CommandInterpreter : MonoBehaviour
                         superFlash = Instantiate(superFlashPrefab, transform.position, transform.rotation, gameObject.transform);
                     }
 
-                    if (gameObject.name.Contains("L"))
-                    {
-                        anim.Play("SSuper");
-                    }
-                    else
-                    {
-                        ea.SSuper();
-                    }
+                    anim.Play("SSuper");
+
 
                 }
                 else if (elementChoice == 't')
@@ -920,14 +903,8 @@ public class CommandInterpreter : MonoBehaviour
                     }
                     else if (elementChoice == 'd')
                     {
-                        if (gameObject.name.Contains("L"))
-                        {
-                            anim.Play("D236E");
-                        }
-                        else
-                        {
-                            ea.D236E();
-                        }
+                        anim.Play("D236E");
+
                     }
                     else if (elementChoice == 's')
                     {
@@ -946,14 +923,7 @@ public class CommandInterpreter : MonoBehaviour
                     }
                     else if (elementChoice == 'd')
                     {
-                        if (gameObject.name.Contains("L"))
-                        {
-                            anim.Play("D214E");
-                        }
-                        else
-                        {
-                            ea.D214E();
-                        }
+                        anim.Play("D214E");
                     }
                     else if (elementChoice == 's')
                     {
@@ -961,14 +931,7 @@ public class CommandInterpreter : MonoBehaviour
                     }
                     else if (elementChoice == 't')
                     {
-                        if (gameObject.name.Contains("L"))
-                        {
-                            anim.Play("T214E");
-                        }
-                        else
-                        {
-                            ea.D214E();
-                        }
+                        anim.Play("T214E");
                     }
                 }
 
@@ -1145,15 +1108,7 @@ public class CommandInterpreter : MonoBehaviour
                         superFlash = Instantiate(superFlashPrefab, transform.position, transform.rotation, gameObject.transform);
                     }
 
-                    if (gameObject.name.Contains("L"))
-                    {
-                        anim.Play("LSuper");
-                    }
-                    else
-                    {
-                        ea.LSuper();
-                    }
-
+                    anim.Play("LSuper");
                 }
                 else if (elementChoice == 'd')
                 {
@@ -1162,14 +1117,8 @@ public class CommandInterpreter : MonoBehaviour
                         superFlash = Instantiate(superFlashPrefab, transform.position, transform.rotation, gameObject.transform);
                     }
 
-                    if (gameObject.name.Contains("L"))
-                    {
-                        anim.Play("DSuper");
-                    }
-                    else
-                    {
-                        ea.DSuper();
-                    }
+                    anim.Play("DSuper");
+
                 }
                 else if (elementChoice == 's')
                 {
@@ -1178,14 +1127,9 @@ public class CommandInterpreter : MonoBehaviour
                         superFlash = Instantiate(superFlashPrefab, transform.position, transform.rotation, gameObject.transform);
                     }
 
-                    if (gameObject.name.Contains("L"))
-                    {
+
                         anim.Play("SSuper");
-                    }
-                    else
-                    {
-                        ea.SSuper();
-                    }
+
 
                 }
                 else if (elementChoice == 't')

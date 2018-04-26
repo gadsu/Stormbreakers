@@ -1,27 +1,28 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GlobalScripts\TimerScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CharacterScripts\RandolfSpecific\RandolfSpecials.cs">
     <Files>
       <File FileName="Assets\Resources\TutorialText.txt" Line="1" Column="1" />
       <File FileName="Assets\Scripts\MiscScripts\TutorialTaskManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\MiscScripts\TutorialModeAIScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\MiscScripts\TextDisplayScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CharacterScripts\CommandInterpreter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CharacterScripts\CommandInterpreter.cs" Line="906" Column="29" />
       <File FileName="Assets\Scripts\MiscScripts\roundIndicatorScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MiscScripts\CharacterChoices.cs" Line="114" Column="5" />
+      <File FileName="Assets\Scripts\MiscScripts\CharacterChoices.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\LynneData.txt" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CharacterScripts\CharacterMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CharacterScripts\CharacterMovement.cs" Line="686" Column="6" />
       <File FileName="Assets\Scripts\GlobalScripts\GameSettings.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Menu Scripts\Character Select Scripts\ControllerNavigation.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CharacterScripts\ElementAttacks.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CharacterScripts\CharacterState.cs" Line="84" Column="83" />
+      <File FileName="Assets\Scripts\CharacterScripts\CharacterState.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GlobalScripts\TimerScript.cs" Line="80" Column="34" />
       <File FileName="Assets\Scripts\MiscScripts\FadeTextGameOver.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CharacterScripts\RandolfSpecific\RandolfSpecials.cs" Line="44" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="E:\Users\Raechel\WORKING\Stormbreakers SVN\Game Files\Stormbreakers\Assets\Scripts\CharacterScripts\CommandInterpreter.cs" line="1135" column="1" />
+      <Breakpoint file="E:\Users\Raechel\WORKING\Stormbreakers SVN\Game Files\Stormbreakers\Assets\Scripts\CharacterScripts\CommandInterpreter.cs" line="1098" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
