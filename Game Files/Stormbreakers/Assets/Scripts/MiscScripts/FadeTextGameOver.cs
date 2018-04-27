@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FadeTextGameOver : MonoBehaviour {
 
@@ -13,6 +14,12 @@ public class FadeTextGameOver : MonoBehaviour {
 
     public void showMenu(){
         GameObject.Find("Timer").GetComponent<PauseMenu>().showGameOverMenu();
+    }
+
+    public void restart()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("Stage1");
     }
 
 	// Use this for initialization

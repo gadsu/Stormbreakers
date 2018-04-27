@@ -15,6 +15,9 @@ public class TutorialModeAIScript : MonoBehaviour {
     public GameObject p1TextBox;
     public GameObject p2TextBox;
     public GameObject narrTextBox;
+
+    private bool finishedActing;
+
 	// Use this for initialization
 	void Start () 
     {
@@ -23,11 +26,15 @@ public class TutorialModeAIScript : MonoBehaviour {
         timeForNextAction = 0;
         anim = GetComponent<Animator>();
         otherPlayer = GameObject.Find("player1L").transform;
+
+        finishedActing = false;
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
+        GetComponent<CharacterState>().fillHealth();
+
         if (timeForNextAction < Time.frameCount && tds.taskComplete == false)
         {
             if (ttm.counter == 7)
@@ -47,19 +54,25 @@ public class TutorialModeAIScript : MonoBehaviour {
             Debug.Log("Should be walking??");
             if (otherPlayer.transform.position.x > gameObject.transform.position.x)
             {
-                Debug.Log("Should be walking Right??");
+                //Debug.Log("Should be walking Right??");
                 anim.Play("walk");
                 gameObject.GetComponent<CharacterMovement>().walk('6');
             }
             else if (otherPlayer.transform.position.x < gameObject.transform.position.x)
             {
-                Debug.Log("Should be walking Left??");
+                //Debug.Log("Should be walking Left??");
                 anim.Play("walk");
                 gameObject.GetComponent<CharacterMovement>().walk('4');
             }
         }
         else
         {
+            if (ttm.counter > 8 && !finishedActing)
+            {
+                Debug.Log("I really hope we're playing the idle animation by now...");
+                anim.Play("idle");
+                finishedActing = true;
+            }
             gameObject.GetComponent<CharacterMovement>().walk('5');
         }
 	}

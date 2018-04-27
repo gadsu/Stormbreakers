@@ -382,6 +382,10 @@ public class ElementAttacks : MonoBehaviour
         {
             if (!GetComponent<CharacterMovement>().isinAir() && dSuper == null)
             {
+                cs.setDamage(12);
+                cs.setAttribute('k');
+                cs.setLevel(3);
+                cs.setZone('m');
                 cs.useSpecial(-100);
                 anim.Play("TSuper");
                 isRushing = true;
@@ -407,7 +411,7 @@ public class ElementAttacks : MonoBehaviour
 
 
 
-    public void fiveE()
+    /*public void fiveE()
     {
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("5E"))
         {
@@ -415,7 +419,7 @@ public class ElementAttacks : MonoBehaviour
             GetComponent<CharacterState>().setDamage(int.Parse(dic["dmg5A"]));
             GetComponent<CharacterState>().setZone(dic["zone5A"][0]);
         }
-    }
+    }*/
 	// Update is called once per frame
 	void Update () {
         if (isRushing && Time.frameCount > rushFrames + 1)

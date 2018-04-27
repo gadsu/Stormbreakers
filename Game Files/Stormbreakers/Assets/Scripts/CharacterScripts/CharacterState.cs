@@ -70,6 +70,7 @@ public class CharacterState : MonoBehaviour {
 
     public GameObject hitSparkPrefab;
     private GameObject hitSpark;
+    private CharacterChoices cc;
 
     public bool isStanding;
 	public bool isInvuln;
@@ -80,7 +81,7 @@ public class CharacterState : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //See which side the player starts on for purpose of flipping sprites
-        Debug.Log("p1");
+        cc = GameObject.Find("CharacterChoices").GetComponent<CharacterChoices>();
         if (gameObject.name.Contains("player1"))
         {
             healthBar = GameObject.Find("Player1Slider").GetComponent<Slider>();
@@ -116,8 +117,6 @@ public class CharacterState : MonoBehaviour {
         cm = GetComponent<CharacterMovement>();
         rb = GetComponent<Rigidbody2D>();
         ci = GetComponent<CommandInterpreter>();
-
-        Debug.Log("CM:");
 
         hitAnim = "hit";
         blockAnim = "block";
@@ -163,9 +162,8 @@ public class CharacterState : MonoBehaviour {
 
         if (isInvuln)
         {
-            Debug.Log("IsInvuln!");
+            
         }
-
 		else if (col.gameObject.tag == "Projectile" && col.GetComponent<ProjectileScript>() && col.gameObject.layer != gameObject.layer)
         { 
 			if(blockZone == ' ')
@@ -181,10 +179,18 @@ public class CharacterState : MonoBehaviour {
 				{
                     if (ci.isCrouching())
                     {
+                        if (ci.charging)
+                        {
+                            ci.charging = false;
+                        }
                         an.Play(crouchHitAnim + "2");
                     }
                     else
                     {
+                        if (ci.charging)
+                        {
+                            ci.charging = false;
+                        }
                         an.Play(hitAnim + "2");
                     }
                 	cm.applyPushback(col.GetComponent<ProjectileScript>().getPushback(), col.GetComponent<ProjectileScript>().getHitstun(), isOnLeft()); 
@@ -209,10 +215,18 @@ public class CharacterState : MonoBehaviour {
                 {
                     if (blockZone == 'l')
                     {
+                        if (ci.charging)
+                        {
+                            ci.charging = false;
+                        }
                         an.Play(crouchBlockAnim);
                     }
                     else
                     {
+                        if (ci.charging)
+                        {
+                            ci.charging = false;
+                        }
                         an.Play(blockAnim);
                     }
 
@@ -220,6 +234,10 @@ public class CharacterState : MonoBehaviour {
                 }
                 else
                 {
+                    if (ci.charging)
+                    {
+                        ci.charging = false;
+                    }
                     an.Play(airBlockAnim);
                     cm.applyPushback(new Vector2(2.0f, rb.velocity.y), isOnLeft()); 
                 }
@@ -245,6 +263,10 @@ public class CharacterState : MonoBehaviour {
             if (cm.isinAir() && (blockZone == 'h' || blockZone == 'l'))
             {
                 AudioSource.PlayClipAtPoint(blockedhitSound, GameObject.Find("Camera").transform.position);
+                if (ci.charging)
+                {
+                    ci.charging = false;
+                }
                 an.Play(airBlockAnim);
                 useSpecial(Mathf.RoundToInt(col.gameObject.GetComponentInParent<CharacterState>().dmg) / 3);
                 col.gameObject.GetComponentInParent<CharacterAttacks>().hitConnect();
@@ -257,10 +279,18 @@ public class CharacterState : MonoBehaviour {
 
                 if (blockZone == 'l')
                 {
+                    if (ci.charging)
+                    {
+                        ci.charging = false;
+                    }
                     an.Play(crouchBlockAnim);
                 }
                 else
                 {
+                    if (ci.charging)
+                    {
+                        ci.charging = false;
+                    }
                     an.Play(blockAnim);
                 }
 
@@ -299,7 +329,10 @@ public class CharacterState : MonoBehaviour {
 				}
                 else if (col.gameObject.GetComponentInParent<CharacterState>().attribute == 'k')
                 {
-                    Debug.Log("KD!");
+                    if (ci.charging)
+                    {
+                        ci.charging = false;
+                    }
                     an.Play("knockedDown");
                     knockDown();
                     cm.comboHits++;
@@ -308,10 +341,18 @@ public class CharacterState : MonoBehaviour {
 				{
                     if (ci.isCrouching())
                     {
+                        if (ci.charging)
+                        {
+                            ci.charging = false;
+                        }
                         an.Play(crouchHitAnim + col.gameObject.transform.parent.GetComponent<CharacterState>().getLevel().ToString());
                     }
                     else
                     {
+                        if (ci.charging)
+                        {
+                            ci.charging = false;
+                        }
                         an.Play(hitAnim + col.gameObject.transform.parent.GetComponent<CharacterState>().getLevel().ToString());
                     }
 					cm.applyPushback(new Vector2(4.0f, rb.velocity.y), isOnLeft()); 
@@ -341,11 +382,7 @@ public class CharacterState : MonoBehaviour {
 		else if (col.gameObject.tag == "ThrowHitbox" && col.gameObject.GetComponentInParent<CharacterState>().zone == 't' &&
             !gameObject.GetComponent<CharacterMovement>().isinAir())
 		{
-            if (isTechingThrow)
-            {
-                Debug.Log("Throw Tech!");
-            }
-            else
+            if (!isTechingThrow)
             {
                 col.gameObject.GetComponentInParent<CharacterAttacks>().nThrowHit();
                 dmg = col.gameObject.GetComponentInParent<CharacterState>().dmg / (cm.comboHits + 1);
@@ -361,6 +398,10 @@ public class CharacterState : MonoBehaviour {
                 }
 
                 Debug.Log("HitThrowPlay!");
+                if (ci.charging)
+                {
+                    ci.charging = false;
+                }
                 an.Play("hitThrow");
                 //healthBar.value -= dmg;
             }
@@ -470,10 +511,12 @@ public class CharacterState : MonoBehaviour {
             if (gameObject.name.Contains("player1"))
             {
                 endGame(1);
+                cc.winScore(2);
             }
             else if (gameObject.name.Contains("player2"))
             {
                 endGame(2);
+                cc.winScore(1);
             }
             Debug.Log(gameObject.name + " died.");
         }
@@ -650,32 +693,59 @@ public class CharacterState : MonoBehaviour {
 
     public void endGame(int player)
     {
-		if (SceneManager.GetActiveScene ().name == "TrainingMode") 
-		{
-			if (player == 1) 
-			{
-				GameObject.Find ("P2Text").GetComponent<Text> ().text = "DEAD";
+        if (SceneManager.GetActiveScene().name == "TrainingMode")
+        {
+            if (player == 1)
+            {
+                GameObject.Find("P2Text").GetComponent<Text>().text = "DEAD";
 
-			}
-			else if(player == 2)
-			{
-				GameObject.Find ("P1Text").GetComponent<Text> ().text = "DEAD";
-			}
-		} 
-		else 
-		{
+            }
+            else if (player == 2)
+            {
+                GameObject.Find("P1Text").GetComponent<Text>().text = "DEAD";
+            }
+
+            Debug.Log("If");
+
+        }
+        else if((cc.getScore(1) == 1 && player == 2) || (cc.getScore(2) == 1 && player == 1))
+        {
+            
+
             if (player == 1) 
             {
                 GameObject.Find("GameOverAnimationText").GetComponent<Text>().text = "Player 2 Wins!";
-
+                cc.p2Score--;
             }
             else if(player == 2)
             {
                 GameObject.Find("GameOverAnimationText").GetComponent<Text>().text = "Player 1 Wins!";
+                cc.p1Score--;
             }
-                
+
+            cc.resetScore();
+
+            Debug.Log("Else If");
+
             GameObject.Find("GameOverAnimationText").GetComponent<Animator>().Play("FadeInText");
-	    }
+        }
+        else
+        {
+            int total = cc.getScore(1) + cc.getScore(2);
+            if (player == 2)
+            {
+                GameObject.Find("GameOverAnimationText").GetComponent<Text>().text = "Round " + (total + 1) + ": Player 1"; 
+            }
+            else if (player == 1)
+            {
+                GameObject.Find("GameOverAnimationText").GetComponent<Text>().text = "Round " + (total + 1) + ": Player 2"; 
+            }
+
+            Debug.Log("Else");
+
+            GameObject.Find("GameOverAnimationText").GetComponent<Animator>().Play("EndRoundFade");
+        }
+		
 	}
 
 	

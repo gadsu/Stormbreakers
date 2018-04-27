@@ -684,9 +684,6 @@ public class CharacterMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        if (gameObject.name.Contains("L"))
-        {
-        }
             
         if (gameObject.layer != initialLayer && !isinAir() && !ci.isJumping())
         {
@@ -695,11 +692,6 @@ public class CharacterMovement : MonoBehaviour {
         else if (gameObject.layer != initialLayer && rb.velocity.y < 0)
         {
             gameObject.layer = airCollisionDownardFixLayer;
-        }
-        if (comboHits > 0)
-        {
-
-            Debug.Log(gameObject.name + comboHits.ToString());
         }
 
         if (comboHits > 1 && !comboVisible)

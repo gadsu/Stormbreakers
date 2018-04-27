@@ -92,6 +92,7 @@
      <Compile Include="Assets\Scripts\MiscScripts\hitSpark.cs" />
      <Compile Include="Assets\Scripts\MiscScripts\OnHighlightButton.cs" />
      <Compile Include="Assets\Scripts\MiscScripts\ProjectileScript.cs" />
+     <Compile Include="Assets\Scripts\MiscScripts\roundIndicatorScript.cs" />
      <Compile Include="Assets\Scripts\MiscScripts\TextDisplayScript.cs" />
      <Compile Include="Assets\Scripts\MiscScripts\ThrowHitboxScript.cs" />
      <Compile Include="Assets\Scripts\MiscScripts\TutorialModeAIScript.cs" />
@@ -105,7 +106,7 @@
      <None Include="Assets\Text Files\LynneData.txt" />
      <None Include="Assets\Text Files\RandolfData.txt" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>E:/Users/Brett/Stormbreakers GIT/Stormbreakers/Game Files/Stormbreakers/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>E:/Users/Raechel/WORKING/Stormbreakers SVN/Game Files/Stormbreakers/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
